@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    AddDefaultCharset utf-8
+    RewriteEngine on
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php
+    RewriteRule ^$ webroot/ [L]
+    RewriteRule (.*) webroot/$1 [L]
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>
+

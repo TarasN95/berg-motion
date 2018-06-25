@@ -1,0 +1,438 @@
+@font-face {
+    font-family: museo700;
+    src: url(/webroot/fonts/museo_700.otf);
+}
+
+@font-face {
+    font-family: museo900;
+    src: url(/webroot/fonts/museo_c_900.ttf);
+}
+
+figure {
+    margin: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: museo700;
+}
+
+
+header {
+    max-width: 1200px;
+    height:100px;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+    z-index: 2
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+footer {
+    max-width: 1200px;
+    height:150px;
+    margin: 0 auto;
+    padding-top:50px;
+}
+
+footer ul {
+    float: right;
+    max-width: 50%;
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+    text-transform: uppercase;
+}
+
+footer img {
+    height: 15px;
+}
+
+footer ul li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 2px; /* Поля вокруг текста */
+}
+
+.s-text {
+    color: #00C9FF;
+    max-width: 50%;
+    font-size:18px;
+    float: left;
+}
+
+.logo {
+    max-width:25%;
+    float:left;
+}
+
+.logo img {
+    max-width: 50px;
+}
+
+nav {
+    float: right;
+    margin-top:15px;
+}
+
+nav ul {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+    text-transform: uppercase;
+}
+
+nav ul>.active>a,nav ul>.active>a:hover{color:  #007C99;}
+
+nav li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+
+}
+
+.gif {
+    width: 25%;
+    width: -webkit-calc(100% / 4);
+    width: calc(100% / 4);
+    float: left;
+}
+
+.bot_gif {
+    width: 50%;
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2);
+    float: left;
+}
+
+.video {
+    width: 50%;
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2);
+    float: left;
+}
+
+a {
+    color: #00C9FF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00A2CE;
+    outline: none;
+    background-color: transparent;
+}
+a:focus,
+a:active {
+    color: #00A2CE;
+    outline: none;
+    background-color: transparent;
+}
+.active {
+    color:  #007C99;
+}
+
+
+.a-videos {
+    text-align: justify;
+    margin-top: 25px;
+    font-size: 16 px;
+    line-height: 25px;
+}
+
+.clear-fix:before, .clear-fix:after {
+    content: " ";
+    display: table;
+}
+
+.clear-fix:after {
+    clear: both;
+}
+
+.clear-fix {
+    *zoom: 1;
+}
+/*hover*/
+
+.container {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-top:5px;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.container:hover .overlay {
+    height: 100%;
+    opacity: 0.7;
+}
+
+footer img:hover {
+    opacity: 0.7;
+}
+
+text {
+    font-family: museo900;
+    margin: 0;
+    padding: 0;
+}
+
+.text {
+    cursor: default;
+    text-align: left;
+    white-space: nowrap;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    overflow: hidden;
+    bottom: 5%;
+    left: 5%;
+}
+
+/*end hover*/
+
+/*video*/
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow:hidden;
+}
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*end video*/
+
+@media screen and (max-width: 1200px) {
+    .video {
+        width: 50%;
+        width: -webkit-calc(100% / 2);
+        width: calc(100% / 2);
+        float: left;
+    }
+
+    .gif {
+        width: 33,33333334%;
+        width: -webkit-calc(100% / 3);
+        width: calc(100% / 3);
+        float: left;
+    }
+
+    header {
+        max-width: 800px;
+        height:100px;
+        margin: 0 auto;
+        padding-top: 50px;
+        position: relative;
+        z-index: 2
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    footer {
+        max-width: 800px;
+        height:150px;
+        margin: 0 auto;
+        padding-top:50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .video {
+        width: 100%;
+        float: left;
+    }
+    .bot_gif {
+        width: 100%;
+        width: -webkit-calc(100%);
+        width: calc(100%);
+        float: none;
+    }
+    .gif {
+        width: 50%;
+        width: -webkit-calc(100% / 2);
+        width: calc(100% / 2);
+        float: left;
+    }
+
+    header {
+        max-width: 800px;
+        height:100px;
+        margin: 0 auto;
+        padding-top: 50px;
+        position: relative;
+        z-index: 2
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    footer {
+        max-width: 800px;
+        height:150px;
+        margin: 0 auto;
+        padding-top:50px;
+    }
+
+    footer ul {
+        float: right;
+        max-width: 50%;
+        margin: 0; /* Обнуляем значение отступов */
+        padding: 4px; /* Значение полей */
+        text-transform: uppercase;
+    }
+
+    footer img {
+                  max-height: 15px;
+              }
+
+    footer ul li {
+        display: inline; /* Отображать как строчный элемент */
+        margin-right: 5px; /* Отступ слева */
+        padding: 2px; /* Поля вокруг текста */
+    }
+
+    .s-text {
+        color: #00C9FF;
+        max-width: 50%;
+        font-size:18px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .video {
+        width: 100%;
+        float: left;
+    }
+
+    .gif {
+        width: 100%;
+        width: -webkit-calc(100%);
+        width: calc(100%);
+        float: left;
+    }
+
+    header {
+        max-width: 400px;
+        height:auto;
+        margin: 0 auto;
+        padding-top: 0px;
+        position: relative;
+        z-index: 2
+    }
+
+    .content {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .s-text {
+        color: #00C9FF;
+        max-width: 100%;
+        text-align: center;
+        font-size:18px;
+        float: none;
+        padding-top: 10px;
+    }
+
+    nav {
+        float: none;
+        margin-top:10px;
+        font-size: 15px;
+    }
+
+    nav ul {
+        max-width: 100%;
+        margin: 0; /* Обнуляем значение отступов */
+        text-transform: uppercase;
+    }
+
+    nav ul li {
+        width:25%;
+        display: inline; /* Отображать как строчный элемент */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    footer {
+        max-width: 400px;
+        height:100px;
+        margin: 0 auto;
+        padding-top: 15px;
+    }
+
+    footer ul {
+        float: none;
+        max-width: 100%;
+        margin: 0; /* Обнуляем значение отступов */
+        text-transform: uppercase;
+    }
+
+    footer ul li {
+        width:25%;
+        display: inline; /* Отображать как строчный элемент */
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        float:none;
+        text-align: center;
+    }
+
+    .logo img {
+        max-width: 40px;
+    }
+}
+
+
+
+
+
+
+

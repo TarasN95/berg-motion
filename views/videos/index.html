@@ -1,0 +1,15 @@
+<?php foreach($data['videos'] as $page_data) { ?>
+
+<div class="video">
+    <figure>
+        <div class="container">
+            <a href ="/videos/view/<?=$page_data['alias']?>"><img src="<?=$page_data['prev']?>">
+                <div class="overlay">
+                    <div class="text"><b><?=$page_data['title']?></b><br>Ілюстратор: <?=$page_data['illustrator']?><br>Аніматор: <?=$page_data['animator']?></div>
+                </div>
+            </a>
+        </div>
+    </figure>
+</div>
+
+<?php } ?>

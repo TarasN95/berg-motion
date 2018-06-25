@@ -1,0 +1,14 @@
+<?php foreach($data['gifs'] as $gif_data) { ?>
+
+<div class="gif">
+    <figure>
+        <div class="container">
+            <img src="<?=$gif_data['gif']?>">
+            <div class="overlay">
+                <div class="text"><b><?=$gif_data['title']?></b><br>Ілюстратор: <?=$gif_data['illustrator']?><br>Аніматор: <?=$gif_data['animator']?></div>
+            </div>
+        </div>
+    </figure>
+</div>
+
+<?php } ?>

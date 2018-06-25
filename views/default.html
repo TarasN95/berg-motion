@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><?=Config::get('site_name')?></title>
+
+    <link rel="shortcut icon" href="/webroot/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/webroot/css/style.css">
+    <script src="/webroot/js/admin.js"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <style type="text/css">#hellopreloader>p{display:none; height:auto;}#hellopreloader_preload{display: block;position: fixed;z-index: 1;top: 0;left: 0;width: 100%;height: 100%; max-width: 10000px;background: #ffffff url(/webroot/img/preload.gif) center center no-repeat;background-size:100px;}</style>
+</head>
+<body>
+
+<header class="clear-fix">
+    <div class="logo">
+        <a href="/"><img src="/webroot/img/logo.png"></img></a>
+    </div>
+    <nav>
+        <ul class="navbar-nav">
+            <li <?php if( App::getRouter()->getController()== 'videos') {?>class="active"<?php }?>><a href="/videos/">Videos</a></li>
+            <li <?php if( App::getRouter()->getController()== 'gifs') {?>class="active"<?php }?>><a href="/gifs/">GIFs</a></li>
+            <li <?php if( App::getRouter()->getController()== 'about') {?>class="active"<?php }?>><a href="/about/">About</a></li>
+            <li <?php if( App::getRouter()->getController()== 'contacts') {?>class="active"<?php }?>><a href="/contacts/">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div>
+    <div class="content clear-fix">
+        <?php if (Session::hasFlash()){?>
+            <div class="alert alert-info" role="alert">
+                <?php Session::flash();?>
+            </div>
+        <?php } ?>
+        <?=$data['content']?><br/>
+    </div>
+    <footer>
+        <ul class="clear-fix">
+            <li><a href="#"><img src="/webroot/img/social/be.svg" alt="Behance" title="Behance"></a></li>
+            <li><a href="#"><img src="/webroot/img/social/dr.svg" alt="Dribbble" title="Dribbble"></a></li>
+            <li><a href="#"><img src="/webroot/img/social/vm.svg" alt="Vimeo" title="Vimeo"></a></li>
+            <li><a href="#"><img src="/webroot/img/social/fb.svg" alt="Facebook" title="Facebook"></a></li>
+        </ul>
+        <div class="s-text">
+            &#169; 2017 Іваницький Т.
+        </div>
+    </footer>
+</div>
+</body>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
+</html>

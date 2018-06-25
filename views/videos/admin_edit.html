@@ -1,0 +1,45 @@
+<h3>Edit page</h3><br/>
+<form method="post" action="">
+    <input type="hidden" name="id" value="<?=$data['page']['id']?>" />
+    <div class="form-group">
+        <label for="alias">Alias</label>
+        <input type="text" id="alias" name="alias" value="<?=$data['page']['alias']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="title" id="title" name="title" value="<?=$data['page']['title']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="illustrator">Illustrator</label>
+        <input type="illustrator" id="illustrator" name="illustrator" value="<?=$data['page']['illustrator']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="animator">Motion Designer</label>
+        <input type="animator" id="animator" name="animator" value="<?=$data['page']['animator']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="prev">Preview Image</label>
+        <input type="prev" id="prev" name="prev" value="<?=$data['page']['prev']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="link">Link</label>
+        <input type="link" id="link" name="link" value="<?=$data['page']['link']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="about">About</label>
+        <textarea id="about" name="about" class="form-control"><?=$data['page']['about']?></textarea>
+    </div>
+    <div class="form-group">
+        <label for="img0">Link</label>
+        <input type="img0" id="img0" name="img0" value="<?=$data['page']['img0']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="img1">Link</label>
+        <input type="img1" id="img1" name="img1" value="<?=$data['page']['img1']?>" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="is_published">Publish?</label>
+        <input type="checkbox" name="is_published" id="is_published" <?php if ($data['page']['is_published']) { ?> checked="checked"<?php } ?>/>
+    </div>
+    <input type="submit" value="Confirm" class="btn btn-success"/>
+</form>

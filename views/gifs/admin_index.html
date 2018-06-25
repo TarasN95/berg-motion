@@ -1,0 +1,18 @@
+<br><br><br><h3>GIF's</h3><br/>
+<table class="table table striped" style="width:400px">
+    <?php foreach($data['gifs'] as $gif_data) {?>
+    <tr>
+        <td><b><?=$gif_data['title']?></b></td>
+        <td align="right">
+            <a href="/admin/gifs/edit/<?=$gif_data['id']?>"><button class="btn btn-sm btn-primary">edit</button></a>
+            <a href="/admin/gifs/delete/<?=$gif_data['id']?>" onclick="return confirmDelete();"><button class="btn btn-sm btn-warning">delete</button></a>
+        </td>
+    </tr>
+    <?php }?>
+</table>
+
+<br/>
+
+<div>
+    <a href="/admin/gifs/add"><button class="btn btn-sm btn-success">New GIF</button></a>
+</div>
